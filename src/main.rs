@@ -1,5 +1,5 @@
-mod guessing_number;
+mod variables;
 
 fn main() {
-    guessing_number::play();
+    variables::play();
 }
