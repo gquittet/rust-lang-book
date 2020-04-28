@@ -1,4 +1,12 @@
+use crate::util::chapter::Title;
+
 pub fn play() {
+    let title = Title {
+        chapter: 3,
+        name: "Variables".to_string(),
+    };
+    title.print();
+
     // Variables are immutable. We can't do that
     // let x = 5;
     // println!("The value of x is: {}", x);
@@ -16,7 +24,7 @@ pub fn play() {
     println!("My constant is {}", MAX_POINTS);
 
     // Shadowing
-    let w = 5;
+    let w: i8 = 5;
 
     let w = w + 1;
 

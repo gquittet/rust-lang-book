@@ -1,4 +1,12 @@
+use crate::util::chapter::Title;
+
 pub fn play() {
+    let title = Title {
+        chapter: 3,
+        name: "Data Types".to_string(),
+    };
+    title.print();
+
     // Scalar Types
 
     // By default the float type is a 64bits float because modern processor deal
@@ -30,7 +38,6 @@ pub fn play() {
     let _z = 'ℤ';
     let _heart_eyed_cat = '😻';
 
-
     // Compound Types
     // Compound types can group multiple values into one type. Rust has two
     // primitive compound types: tuples and arrays.
@@ -54,8 +61,20 @@ pub fn play() {
     // Array
     // Array size is static. To use dynamic array check out Vector.
     println!("\nArray:");
-    let months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
     println!("months -> {:?}", months);
     // a = [3, 3, 3, 3, 3];
     let a = [3; 5];

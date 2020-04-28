@@ -1,4 +1,12 @@
+use crate::util::chapter::Title;
+
 pub fn play() {
+    let title = Title {
+        chapter: 3,
+        name: "Control Flow".to_string(),
+    };
+    title.print();
+
     // if else if else
     let number = 6;
 

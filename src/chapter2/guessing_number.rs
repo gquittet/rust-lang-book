@@ -1,14 +1,20 @@
-use std::io;
-use std::cmp::Ordering;
+use crate::util::chapter::Title;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 pub fn play() {
+    let title = Title {
+        chapter: 2,
+        name: "Guess the number".to_string(),
+    };
+    title.print();
+
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
     println!("The secret number is: {}", secret_number);
-
 
     loop {
         println!("Please input your guess.");
@@ -36,4 +42,3 @@ pub fn play() {
         }
     }
 }
-
